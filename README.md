@@ -28,5 +28,3 @@ Stay tuned for training and evaluation scripts!
 - [ ] Release trained models   
 - [ ] Provide detailed documentation  
 
-%## 📢 Stay Updated  
-%⭐ **Star** this repository to stay updated! We will release the code and models soon.  

@@ -23,8 +23,10 @@ We will provide detailed installation instructions and dependencies once the cod
 ## 🚀 Usage (Coming Soon)  
 Stay tuned for training and evaluation scripts!  
 
-## 📊 Benchmark Results  
-We will release benchmark comparisons once the code and pretrained models are available.  
+## 📅 To-Do  
+- [ ] Upload codebase  
+- [ ] Release trained models   
+- [ ] Provide detailed documentation  
 
-## 📢 Stay Updated  
-⭐ **Star** this repository to stay updated! We will release the code and models soon.  
+%## 📢 Stay Updated  
+%⭐ **Star** this repository to stay updated! We will release the code and models soon.  

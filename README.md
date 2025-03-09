@@ -12,19 +12,4 @@ We propose **Adaptive Multi-Teacher Pruned Knowledge Distillation (AMTP-KD)**, w
 
 Extensive experiments on **Waymo & KITTI datasets** demonstrate that our method achieves a **4× reduction in FLOPs and parameters** without noticeable accuracy loss in LiDAR-based 3D object detection.  
 
-## 📖 Features  
-✅ **Multi-Teacher Pruned Distillation**: Generates efficient teacher assistants via structured and unstructured pruning.  
-✅ **Adaptive Knowledge Fusion**: Incorporates hard selection and Softmax-T-based multi-stage strategies.  
-✅ **Multi-Teacher Pivotal Region Masks**: Enhances feature-level knowledge transfer.  
-
-## 🔧 Installation (Coming Soon)  
-We will provide detailed installation instructions and dependencies once the code is uploaded.  
-
-## 🚀 Usage (Coming Soon)  
-Stay tuned for training and evaluation scripts!  
-
-## 📅 To-Do  
-- [ ] Upload codebase  
-- [ ] Release trained models   
-- [ ] Provide detailed documentation  
 

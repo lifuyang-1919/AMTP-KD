@@ -1,8 +1,5 @@
 # AMTP-KD: Adaptive Multi-Teacher Pruned Knowledge Distillation  
 
-🚀 **[Project Under Development]** Code will be released soon. Stay tuned!  
-
-## 📌 Introduction  
 High-performance LiDAR-based 3D object detectors often face significant computational overhead, necessitating their compression into lightweight detectors. Knowledge distillation (KD) is an effective approach for sparse 3D object detection compression.  
 
 We propose **Adaptive Multi-Teacher Pruned Knowledge Distillation (AMTP-KD)**, which:  

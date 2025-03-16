@@ -501,7 +501,7 @@ class CenterFeatureKDHead(KDHeadTemplate):
                 score_mask = pred_scores > self.model_cfg.FEATURE_KD.ROI_POOL.THRESH
                 rois.append(cur_pred_tea['pred_boxes'][score_mask])
 
-        elif self.model_cfg.FEATURE_KD.ROI_POOL.ROI == 'tea_5':
+        elif self.model_cfg.FEATURE_KD.ROI_POOL.ROI == 'tea_5' and batch_dict['temperature'] == 200:
             rois = []
             for b_idx in range(bs):
                 pred_boxes_list = []
@@ -544,6 +544,15 @@ class CenterFeatureKDHead(KDHeadTemplate):
                     rois.append(nms_boxes)
                 else:
                     rois.append(torch.zeros((0, 7)).to(feature_stu.device))
+        elif self.model_cfg.FEATURE_KD.ROI_POOL.ROI == 'tea_5' and batch_dict['temperature'] == 0.02:
+            rois = []
+            normalized_weights = self.get_normalized_weights(batch_dict['adaptive_weights'], temperature=200)
+            teacher_idx = normalized_weights.argmin()
+            for b_idx in range(bs):
+                cur_pred_tea = batch_dict[f'decoded_pred_tea{teacher_idx + 1 if teacher_idx > 0 else ""}'][b_idx]
+                pred_scores = cur_pred_tea['pred_scores']
+                score_mask = pred_scores > self.model_cfg.FEATURE_KD.ROI_POOL.THRESH
+                rois.append(cur_pred_tea['pred_boxes'][score_mask])
         elif self.model_cfg.FEATURE_KD.ROI_POOL.ROI == 'tea':
             rois = []
             teacher_idx = 0

@@ -197,7 +197,7 @@ def train_model_kd(model, optimizer, train_loader, model_func, lr_scheduler, opt
                         teacher_models=teacher_models,
                         temperature=temperature
                     )
-                if interval % 3 == 1 and (Cycle < optim_cfg.Cycle_num):  # 0， 1， 2
+                elif interval % 3 == 1 and (Cycle < optim_cfg.Cycle_num):  # 0， 1， 2
                     temperature = 0.02
                     accumulated_iter = train_one_epoch(  # 训练一个epoch
                         model, optimizer, train_loader, model_func,
